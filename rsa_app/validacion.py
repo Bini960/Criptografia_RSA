@@ -1,4 +1,4 @@
-from rsa_app.matematica import es_primo, mcd_euclides
+from rsa_app.logica import es_primo, mcd_euclides
 
 def leer_entero(texto, nombre):
     if texto == "":

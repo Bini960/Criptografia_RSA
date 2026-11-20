@@ -1,7 +1,7 @@
 import sys
 from rsa_app.codificacion import agregar_relleno, codigos_a_pareja, numero_a_codigos, pareja_a_numero, quitar_relleno, unir_bloques
 from rsa_app.validacion import validar_cifrado, validar_codigos, validar_llave, validar_longitud, validar_mensaje, validar_relleno
-from rsa_app.matematica import exponenciacion_modular, inverso_modular, mcd_euclides
+from rsa_app.logica import exponenciacion_modular, inverso_modular, mcd_euclides
 sys.setrecursionlimit(20000)
 
 def encriptar(mensaje, texto_p, texto_q, texto_e):

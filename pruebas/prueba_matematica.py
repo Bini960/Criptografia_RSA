@@ -1,4 +1,4 @@
-from rsa_app.matematica import bezout_matricial, es_primo, exponenciacion_modular, inverso_modular, mcd_euclides
+from rsa_app.logica import bezout_matricial, es_primo, exponenciacion_modular, inverso_modular, mcd_euclides
 
 
 def primo_por_division(n):
