@@ -5,7 +5,7 @@ from rsa_app.matematica import exponenciacion_modular, inverso_modular, mcd_eucl
 sys.setrecursionlimit(20000)
 
 def encriptar(mensaje, texto_p, texto_q, texto_e):
-    p, q, e, n, phi  = validar_llave(texto_p, texto_q, texto_e)
+    p, q, e, n, phi = validar_llave(texto_p, texto_q, texto_e)
     validar_mensaje(mensaje)
 
     longitud = len(mensaje)

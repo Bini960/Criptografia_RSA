@@ -39,7 +39,7 @@ def validar_llave(texto_p, texto_q, texto_e):
     if mcd_euclides(e, phi) != 1:
         raise ValueError("El exponente e no es primo relativo con phi.")
 
-    return p, q, e, n, phi 
+    return p, q, e, n, phi
 
 def validar_mensaje(mensaje):
     if mensaje == "":
@@ -97,4 +97,4 @@ def validar_codigos(codigo1, codigo2, numero_bloque):
 
 def validar_relleno(texto, longitud):
     if longitud % 2 != 0 and texto[-1] != " ":
-        raise ValueError(f"Como L es {longitud} (impar), el último carácter recuperado deberia ser el espacio de relleno. Revisar que L, p, q, e y C sean los mismos con los que se encriptó.")
+        raise ValueError("Como L es impar, el último carácter recuperado debería ser el espacio de relleno. Revisar que L, p, q, e y C sean los mismos con los que se encriptó.")

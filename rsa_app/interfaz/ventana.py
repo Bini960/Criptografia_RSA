@@ -1,4 +1,6 @@
 import customtkinter as ctk
+from rsa_app.interfaz.pestana_encriptar import PestanaEncriptar
+from rsa_app.interfaz.pestana_desencriptar import PestanaDesencriptar
 
 
 class Ventana(ctk.CTk):
@@ -10,12 +12,17 @@ class Ventana(ctk.CTk):
 
         cuadro = ctk.CTkFrame(self, corner_radius=0, fg_color="gray86")
         cuadro.pack(fill="both", expand=True, padx=15, pady=15)
+        ctk.CTkLabel(cuadro, text="Criptografía RSA", font=ctk.CTkFont(size=26, weight="bold")).pack(pady=(10, 0))
+        ctk.CTkLabel(cuadro, text="Carlos Pozuelos Mendizabal 25104   y   Andrés Castro Morales 25039", font=ctk.CTkFont(size=14)).pack()
 
         barra = ctk.CTkFrame(cuadro, corner_radius=0, fg_color="transparent")
         barra.pack(side="bottom")
 
         self.marco_encriptar = ctk.CTkFrame(cuadro, corner_radius=0, fg_color="transparent")
         self.marco_desencriptar = ctk.CTkFrame(cuadro, corner_radius=0, fg_color="transparent")
+
+        PestanaEncriptar(self.marco_encriptar).pack(fill="both", expand=True)
+        PestanaDesencriptar(self.marco_desencriptar).pack(fill="both", expand=True)
 
         self.boton_encriptar = ctk.CTkButton(barra, text="Encriptar", width=170, height=40, corner_radius=0,
                                              font=ctk.CTkFont(size=16), text_color="white",
