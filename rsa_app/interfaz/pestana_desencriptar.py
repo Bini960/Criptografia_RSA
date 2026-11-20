@@ -66,14 +66,14 @@ class PestanaDesencriptar(ctk.CTkFrame):
         self.etiqueta_error.configure(text="")
 
         if resultado["relleno"]:
-            linea_relleno = 'Mensaje con relleno: "' + resultado["texto_recuperado"] + '"'
+            linea_relleno = 'Mensaje con relleno: "' + resultado["texto_recuperado"] + '" (se quitó el espacio de relleno)'
         else:
             linea_relleno = "Relleno: No"
 
         lineas = [
             "Mensaje recuperado: " + con_comillas(resultado["mensaje"]),
             "Longitud L: " + str(resultado["longitud"]),
-            "Relleno: " + linea_relleno,
+            linea_relleno,
             "p = " + texto_p + "     q = " + texto_q + "     e = " + texto_e,
             "n = " + str(resultado["n"]) + "     φ = " + str(resultado["phi"]) + "     d = " + str(resultado["d"]),
             "Llave privada (d, n): (" + str(resultado["d"]) + ", " + str(resultado["n"]) + ")"

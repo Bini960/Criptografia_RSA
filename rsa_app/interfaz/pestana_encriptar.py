@@ -75,7 +75,7 @@ class PestanaEncriptar(ctk.CTkFrame):
         self.etiqueta_error.configure(text="")
 
         if resultado["relleno"]:
-            linea_relleno = 'Mensaje con relleno: "' + resultado["texto_con_relleno"] + '"'
+            linea_relleno = 'Mensaje con relleno: "' + resultado["texto_con_relleno"] + '" (se agregó un espacio de relleno)'
         else:
             linea_relleno = "Relleno: No"
 
